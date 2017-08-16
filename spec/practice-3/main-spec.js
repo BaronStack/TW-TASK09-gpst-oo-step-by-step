@@ -75,7 +75,7 @@ describe("Teacher", () => {
     let teacher = new Teacher("Joun", 21, [clazz1, clazz2]);
     expect(teacher.name).toBe("Joun");
     expect(teacher.age).toBe(21);
-    expect(teacher.clazzes).toEqual([clazz1, clazz2]);
+    expect(teacher.clazzs).toEqual([clazz1, clazz2]);
   });
 
   it("should overwrite Person introduce and show all classes this teacher teaches, whe" +
