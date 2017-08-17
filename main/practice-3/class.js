@@ -19,7 +19,7 @@ module.exports = class Class {
     appendMember(student) {
         this.member.push(student);
         if (this.teacher) {
-            this.teacher.notifyStudentAppended(`${student.name} has joined Class ${student.clazz.number}`);
+            this.teacher.notifyStudentAppended( student.name + ' has joined Class ' + student.clazz.number);
         }
     }
     isHasStudent(student) {

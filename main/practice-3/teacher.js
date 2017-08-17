@@ -3,7 +3,7 @@ const Person = require('./person');
 module.exports = class Teacher extends Person{
     constructor (name,age,clazzs) {
         super(name,age);
-        this.distribute(clazzs);
+        this.assignObject(clazzs);
         this.clazzs = clazzs;
     }
     introduce () {
@@ -24,9 +24,9 @@ module.exports = class Teacher extends Person{
             return clazz.member.some(member => member.id === student.id);
         });
     }
-    notifyStudentAppended(info) {}
-    notifyLeaderAssigned(info) {}
-    distribute(clazzs) {
+    notifyStudentAppended() {}
+    notifyLeaderAssigned() {}
+    assignObject(clazzs) {
         for (let clazz of clazzs) {
             clazz.teacher = this;
         }
